@@ -20,7 +20,9 @@ public class Login {
                 //conexion a la base
                 Connection bd=ConectarBD();
                 Consulta(bd);
-                if
+                if(user=S(inputUser.getText())){
+
+                }
 
             }
         });
@@ -38,6 +40,7 @@ public class Login {
                 user=resultSet.getInt("ID_EST");
                 pass=resultSet.getString("Password_EST");
                 System.out.println("ID: "+user+"\nPassword: "+pass);
+
             }
         }catch (SQLException a){
             throw new RuntimeException();
